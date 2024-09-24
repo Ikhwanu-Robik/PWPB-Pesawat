@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batik Air</title>
+    <link rel="shortcut icon" href="/images/icon-batik-air.png" type="image/x-icon" />
+    <style>
+      * {
+        font-family: Sans-Serif;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        background-color: #bc2453;
+        color: white;
+        padding-left: 20px;
+        width: 50%;
+      }
+      table, td, tr {
+        border: 1px solid white;
+        border-collapse: collapse;
+      }
+      form {
+        background-color: #bc2453;
+        color: white;
+        padding: 10px;
+      }
+      input, select {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+        <img src="/images/logo-batik-air.png" alt="logo-batik-air" width="40%"/>
+    </h1>
+    <h2>Layanan Kami</h2>
+    <table>
+      <tr>
+        <td>
+          <h3>Jenis Penerbangan</h3>
+          <table>
+            <tr>
+              <td style="width: 30%">
+                <h4>One way</h4>
+                <p style="background-color: hsl(341.4,75.5%,28.9%)">A one-way ticket for a journey can only be used to travel in one direction and not for returning</p>
+                </td>
+              <td style="width: 30%">
+                <h4>Return</h4>
+                <p style="background-color: hsl(341.4,75.5%,28.9%)">Also known as “return air tickets,” round-trip tickets are flights from and back to the same location of origin. </p>
+                </td>
+              <td style="width: 30%">
+                <h4>Multicities</h4>
+                <p style="background-color: hsl(341.4,75.5%,28.9%)">A multi-city flight is an advanced airline ticket which allows you to travel across the world using multiple stops: greatly increasing the value of your trip by booking extra legs with stopovers in several different cities!</p>
+                </td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <h3>Kelas Tiket</h3>
+          <table>
+            <tr>
+              <td style="width: 45%">
+                <h4>Economy</h4>
+                <p style="background-color: hsl(341.4,75.5%,28.9%)">With its unbeatable value, economy class is the smart choice for travelers who want to get the most out of their trip while staying within their means. Why pay more when you can enjoy all the benefits of modern air travel at a fraction of the cost?</p>
+                </td>
+              <td style="width: 45%">
+                <h4>Business</h4>
+                <p style="background-color: hsl(341.4,75.5%,28.9%)">Business class is a big step up from economy, with wider, more comfortable seats that either recline or lie flat; better food, sometimes served on china; and, often, airport lounge access.</p>
+                </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <h2>Pemesanan Tiket</h2>
+    <form action="order.php" method="POST">
+      <label for="flight-type">Jenis Penerbangan</label>
+      <select name="flight-type" id="flight-type">
+        <option value="oneway">Oneway</option>
+        <option value="return">Return</option>
+        <option value="multicites">Multicities</option>
+      </select>
+      <br>
+      <label for="ticket-class">Jenis Penerbangan</label>
+      <select name="ticket-class" id="ticket-class">
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+      </select>
+      <br>
+      <label for="depart-date">Tanggal Berangkat</label>
+      <input type="date" name="depart-date" id="depart-date"/>
+      <br>
+      <label for="return-date">Tanggal Kembali<span style="color: rgb(254,255,32)"> *</span></label>
+      <input type="date" name="return-date" id="return-date"/>
+      <br>
+      <label for="name">Nama</label>
+      <input type="text" name="" id="name"/>
+      <br>
+      <label for="telephone">No. Telp</label>
+      <input type="tel" name="telephone" id="telephone"/>
+      <br />
+      <label for="citizen_id">NIK</label>
+      <input type="number" name="citizen_id" id="citizen_id"/>
+      <br />
+      <label for="bank_account">No. Rekening</label>
+      <input type="number" name="bank_account" id="bank_account"/>
+      <br />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email"/>
+      <br />
+    <a href="order.html"><button><img src="/images/airplane.png" alt="icon_pesawat" width="30px"/> Pesan</button></a>
+    </form>
+    <br>
+    <span>* Tanggal kembali hanya diisi jika membeli tiket Return<br>* untuk tiket Multicities akan dihubungi lebih lanjut melalui email</span>
+  </body>
+</html>
